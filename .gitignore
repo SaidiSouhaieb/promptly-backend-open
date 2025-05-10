@@ -1,0 +1,8 @@
+.env
+env
+.venv
+venv
+storage/vectorstores/*
+.storage/vectorstores/*
+
+llms/gguf/models/*
