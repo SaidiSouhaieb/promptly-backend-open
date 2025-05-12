@@ -8,7 +8,7 @@ EMAIL_REGEX = r"(^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$)"
 # Storage
 STORAGE_PATH = "storage"
 TEMP_PATH = "temp"
-VECTORSTORE_NAME = "fake_rag_data_neotech"
+VECTORSTORE_NAME = "string_test_test"
 VECTORSTORE_TYPE = "semantic"
 
 # Embedding

@@ -26,11 +26,14 @@ model_loader = ModelLoader()
 
 @chatbot_router.post("/")
 async def chat_endpoint(input: TextInput, db: Session = Depends(get_db)):
-    db_path = os.path.join(STORAGE_PATH, "vectorstores", VECTORSTORE_NAME, VECTORSTORE_TYPE)
+    db_path = os.path.join(
+        STORAGE_PATH, "vectorstores", VECTORSTORE_NAME, VECTORSTORE_TYPE
+    )
+
+    print(db_path, "path\n\n\n")
 
     model_name = input.model_name
     qa_chain = get_chain(db_path, EMBEDDING_MODEL_NAME, model_name, input.text)
     response = qa_chain.invoke(input.text)
 
     return {"reply": response}
- 

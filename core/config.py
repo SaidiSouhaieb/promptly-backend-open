@@ -5,11 +5,7 @@ class Settings(BaseSettings):
     PROJECT_NAME: str = "Promptly API"
     API_V1_STR: str = "/api/v1"
 
-    # OPENAI_API_KEY: str
-    # SECRET_KEY: str
-    # ACCESS_TOKEN_EXPIRE_MINUTES: int = 30
-
-    POSTGRES_USERNAME: str
+    POSTGRES_USER: str
     POSTGRES_DB: str
     POSTGRES_PORT: str
     POSTGRES_PASSWORD: str
@@ -18,6 +14,7 @@ class Settings(BaseSettings):
 
     class Config:
         env_file = ".env"
+        extra="ignore"
 
 
 settings = Settings()

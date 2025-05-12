@@ -32,19 +32,19 @@ app.include_router(chatbot_router)
 app.include_router(process_router)
 
 
-@app.get("/test-db-connection")  # Fixed: added app. prefix and proper decorator
+@app.get("/test-db-connection")
 async def test_db_connection(db: Session = Depends(get_db)):
     inspector = inspect(engine)
     tables = inspector.get_table_names()
     return {"tables": tables}
 
 
-@app.get("/")  # Fixed: added app. prefix
+@app.get("/")
 async def root():
     return {"message": "API is working", "admin_panel": "/admin"}
 
 
-if __name__ == "__main__":  # Uncommented and fixed the main block
+if __name__ == "__main__":
     import uvicorn
 
     uvicorn.run("main:app", host="0.0.0.0", port=8230, reload=True)

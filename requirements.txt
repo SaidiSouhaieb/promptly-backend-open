@@ -93,3 +93,4 @@ sqladmin
 pydantic[email]
 six==1.16.0  # Newer version with maintained backports
 striprtf
+langchain-huggingface

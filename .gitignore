@@ -1,8 +1,19 @@
+# Ignore virtual environments and env files
 .env
-env
-.venv
-venv
-storage/vectorstores/*
-.storage/vectorstores/*
+env/
+.venv/
+venv/
 
+# Ignore all vectorstores data but keep .gitkeep
+storage/vectorstores/*
+!.gitkeep
+!storage/vectorstores/.gitkeep
+
+.storage/vectorstores/*
+!.gitkeep
+!.storage/vectorstores/.gitkeep
+
+# Ignore all LLM models but keep .gitkeep
 llms/gguf/models/*
+!.gitkeep
+!llms/gguf/models/.gitkeep

@@ -1,1 +1,1 @@
-# promptly-backend-open
+# promptly-backend
