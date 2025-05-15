@@ -1,0 +1,36 @@
+services:
+  promptly:
+    container_name: promptly-backend
+    build:
+      context: .
+      dockerfile: ./docker/Dockerfile 
+    working_dir: /app
+    environment:
+      - PYTHONPATH=/app
+    ports:
+      - "${BACKEND_PORT}:${BACKEND_PORT}"
+    volumes:
+      - .:/app
+
+    depends_on:
+      - db
+    networks:
+      - backend
+
+  db:
+    container_name: promptly-database
+    image: postgres:15.13
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    ports:
+      - "${POSTGRES_PORT}:${POSTGRES_PORT}"
+    networks:
+      - backend
+
+
+networks:
+  backend:
+    driver: bridge
+    name: backend
