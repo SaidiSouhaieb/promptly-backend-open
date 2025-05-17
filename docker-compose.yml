@@ -10,7 +10,7 @@ services:
     ports:
       - "${BACKEND_PORT}:${BACKEND_PORT}"
     volumes:
-      - .:/app
+      - .:/app:rw
 
     depends_on:
       - db

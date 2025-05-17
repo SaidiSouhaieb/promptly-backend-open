@@ -16,11 +16,12 @@ from db.session import get_db
 from services.file.embedding_pipeline import embedding_pipeline
 from services.file.upload import create_data_source
 from services.file.content_extractor import ExtractContent
+from services.chatbot.chat import generate_response, get_chatbot_and_data_source
 from models.file.upload_response import UploadResponse
 from utils.file.remove_file_extensions import get_file_type
 from utils.file.create_temp_file import create_temp_file
 from utils.file.path_utils import get_semantic_folder_path
-from core.constants import STORAGE_PATH
+from core.constants import STORAGE_PATH, EMBEDDING_MODEL_NAME
 from core.security import get_current_user
 from core.logging import logging
 

@@ -1,8 +1,8 @@
 """migration
 
-Revision ID: c6ebf7a5b094
+Revision ID: 01747e4865e1
 Revises: 
-Create Date: 2025-05-14 10:56:08.880219
+Create Date: 2025-05-17 17:38:24.811397
 
 """
 from typing import Sequence, Union
@@ -12,7 +12,7 @@ import sqlalchemy as sa
 
 
 # revision identifiers, used by Alembic.
-revision: str = 'c6ebf7a5b094'
+revision: str = '01747e4865e1'
 down_revision: Union[str, None] = None
 branch_labels: Union[str, Sequence[str], None] = None
 depends_on: Union[str, Sequence[str], None] = None
@@ -77,8 +77,7 @@ def upgrade() -> None:
     sa.Column('type', sa.Enum('pdf', 'txt', 'url', 'csv', 'api', 'json', 'qa', name='datasourcetypeenum'), nullable=False),
     sa.Column('file_path', sa.String(), nullable=False),
     sa.Column('status', sa.Enum('pending', 'processed', 'failed', name='datasourcestatusenum'), nullable=True),
-    sa.Column('processed_at', sa.TIMESTAMP(timezone=True), server_default=sa.text('now()'), nullable=True),
-    sa.Column('created_at', sa.TIMESTAMP(timezone=True), server_default=sa.text('now()'), nullable=True),
+    sa.Column('created_at', sa.DateTime(), nullable=True),
     sa.Column('updated_at', sa.DateTime(), nullable=True),
     sa.ForeignKeyConstraint(['chatbot_id'], ['Chatbot.id'], ),
     sa.PrimaryKeyConstraint('id')

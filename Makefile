@@ -22,7 +22,10 @@ start: build up
 rebuild: clean start
 
 logs:
-	${DOCKER_COMPOSE} -f ${DOCKER_COMPOSE_PATH} logs -f
+	${DOCKER_COMPOSE} -f ${DOCKER_COMPOSE_PATH} logs -f promptly
+
+logs-db:
+	${DOCKER_COMPOSE} -f ${DOCKER_COMPOSE_PATH} logs -f db
 
 shell-backend:
 	${DOCKER_COMPOSE} -f ${DOCKER_COMPOSE_PATH} exec promptly /bin/bash
@@ -35,3 +38,7 @@ alembic-downgrade:
 alembic-revision:
 	${DOCKER_COMPOSE} -f ${DOCKER_COMPOSE_PATH} exec promptly alembic revision --autogenerate -m "migration"
 alembic-migrate: alembic-revision alembic-upgrade
+
+# Tests
+test:
+	${DOCKER_COMPOSE} -f ${DOCKER_COMPOSE_PATH} exec promptly pytest -s tests/

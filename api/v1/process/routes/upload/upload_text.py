@@ -42,7 +42,7 @@ async def process_text_input(
 ):
     chatbot = db.query(Chatbot).filter(Chatbot.id == input.chatbot_id).first()
     if not chatbot:
-        return {"error": "Chatbot not found"}
+        raise HTTPException(status_code=404, detail="Chatbot not found")
 
     vector_store_path = get_semantic_folder_path(input.file_name)
     same_vectorstore = os.path.exists(vector_store_path)
