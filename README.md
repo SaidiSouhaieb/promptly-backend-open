@@ -54,41 +54,47 @@ cd promptly-ai-backend
 
 2. **Build and Run using Docker**:
 
-You can use Docker Compose to manage the backend, build the container, and start the application:
+Use the provided `Makefile` commands to manage the project easily:
 
-- To **build** the Docker image:
+- **Build the Docker image**:
 
 ```bash
 make build
 ```
 
-- To **start** the application in the background:
+- **Start the application in the background**:
 
 ```bash
 make up
 ```
 
-- To **stop** the application:
+- **Stop the application**:
 
 ```bash
 make down
 ```
 
-- To **rebuild** the Docker container:
+- **Rebuild the Docker container**:
 
 ```bash
 make rebuild
 ```
 
-- You can view the logs of your running Docker container with:
+- **View container logs**:
 
 ```bash
 make logs
 ```
 
+- **Access backend container shell**:
+
+```bash
+make shell-backend
+```
+
 3. **Set up environment variables**:
 
-Create a .env file in the root of the project and add necessary environment variables:
+Create a `.env` file in the root of the project and add necessary environment variables:
 
 ```env
 # Backend
@@ -102,6 +108,42 @@ POSTGRES_URL=postgresql://user_xyz789:SecurePass#9876@localhost:5433/my_test_db
 # Server
 BACKEND_PORT=3000
 ```
+
+4. **Run Alembic Migrations**:
+
+- Upgrade to latest migration:
+
+```bash
+make alembic-upgrade
+```
+
+- Downgrade one migration step:
+
+```bash
+make alembic-downgrade
+```
+
+- Generate new migration file:
+
+```bash
+make alembic-revision
+```
+
+- Create and apply migration:
+
+```bash
+make alembic-migrate
+```
+
+5. **Run Tests**:
+
+To run backend tests:
+
+```bash
+make test
+```
+
+---
 
 4. **Access the Application**:
 
