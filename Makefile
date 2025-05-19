@@ -2,7 +2,8 @@ PROJECT_NAME=promptly
 DOCKERFILE_PATH=./docker/Dockerfile
 BUILD_CONTEXT=..
 DOCKER_COMPOSE_PATH=docker-compose.yml
-DOCKER_COMPOSE= docker-compose  --env-file=.env
+DOCKER_COMPOSE= docker compose --env-file=.env
+
 
 # Managing containers
 build:
