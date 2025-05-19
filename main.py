@@ -44,7 +44,7 @@ async def test_db_connection(db: Session = Depends(get_db)):
 
 @app.get("/")
 async def root():
-    return {"message": "API is working!", "admin_panel": "/admin"}
+    return {"message": "API is working!!", "admin_panel": "/admin"}
 
 
 if __name__ == "__main__":
