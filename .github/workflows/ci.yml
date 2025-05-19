@@ -9,6 +9,9 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
+    env:
+      DB_USER: ${{ secrets.POSTGRES_USER }}
+      DB_PASS: ${{ secrets.POSTGRES_PASSWORD }}
 
     steps:
       - uses: actions/checkout@v3
