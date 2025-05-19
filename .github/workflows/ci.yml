@@ -12,6 +12,8 @@ jobs:
     env:
       POSTGRES_USER: ${{ secrets.POSTGRES_USER }}
       POSTGRES_PASSWORD: ${{ secrets.POSTGRES_PASSWORD }}
+      POSTGRES_URL: ${{ secrets.POSTGRES_URL }}
+      JWT_SECRET: ${{ secrets.JWT_SECRET }}
       POSTGRES_DB: promptly_db
       POSTGRES_PORT: 5432
       BACKEND_PORT: 8230
