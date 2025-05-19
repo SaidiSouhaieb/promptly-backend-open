@@ -1,15 +1,11 @@
 import pytest
 from unittest.mock import patch
-from fastapi.testclient import TestClient
+from tests.conftest import client
+
 
 from main import app
 from db.models.chatbot.chatbot import Chatbot
 from api.v1.chatbots.routes.chat import get_current_user
-
-
-@pytest.fixture
-def client():
-    return TestClient(app)
 
 
 @pytest.fixture
