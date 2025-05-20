@@ -40,7 +40,8 @@ alembic-revision:
 alembic-migrate: alembic-revision alembic-upgrade
 
 wait-for-db:
-	docker compose exec promptly ./wait-for-it.sh db:5432 -t 30
+	docker compose run --rm promptly /app/scripts/wait-for-it.sh db:5432 -t 30
+
 
 
 # Tests
