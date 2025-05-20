@@ -23,7 +23,7 @@ Your support helps others discover the project and motivates continued developme
 
 > Thank you for being part of the journey! 🙌
 
-👉 [**Star this project on GitHub**](https://github.com/SaidiSouhaieb/promptly-ai-backend)
+👉 [**Star this project on GitHub**](https://github.com/SaidiSouhaieb/promptly-lite.git)
 
 [![GitHub Stars](https://img.shields.io/github/stars/SaidiSouhaieb/promptly-ai-backend?style=social)](https://github.com/SaidiSouhaieb/promptly-ai-backend/stargazers)
 
