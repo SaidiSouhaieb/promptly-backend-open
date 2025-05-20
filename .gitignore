@@ -22,3 +22,6 @@ llms/gguf/models/*
 .GH_OS_REPO_TOKEN
 GH_OS_REPO_TOKEN
 .GH_OS_REPO_TOKEN
+
+alembic/versions/*
+.alembic/versions/*
