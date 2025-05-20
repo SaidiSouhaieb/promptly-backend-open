@@ -48,7 +48,7 @@ Your support helps others discover the project and motivates continued developme
 1. **Clone the repo**:
 
 ```bash
-git clone https://github.com/SaidiSouhaieb/promptly-ai-backend.git
+git clone https://github.com/SaidiSouhaieb/promptly-lite.git
 cd promptly-ai-backend
 ```
 
