@@ -32,7 +32,7 @@ Your support helps others discover the project and motivates continued developme
 - **Customizable Chatbots**: Upload your own data to train AI models.
 - **Dynamic Interactions**: Create chatbots capable of handling dynamic and evolving queries.
 - **Easy API Access**: Interact with your chatbot using simple API calls.
-- **Open-Source**: Built to be open and collaborative. [**Contribute here**](CONTRIBUTING.md)
+- **Open-Source**: Built to be open and collaborative. [**Contribute here**](docs/CONTRIBUTING.md)
 - **Scalable**: Designed to handle varying data sizes and use cases.
 
 ## 📖 How to Use the APIs
