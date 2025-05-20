@@ -39,8 +39,12 @@ jobs:
       - name: Build and start containers
         run: make start
 
-      - name: Create database
+      - name: Wait for DB
+        run: make wait-for-db
+
+      - name: Run Alembic migrations
         run: make alembic-upgrade
+
 
       - name: Run tests inside container
         run: make test

@@ -39,6 +39,10 @@ alembic-revision:
 	${DOCKER_COMPOSE} -f ${DOCKER_COMPOSE_PATH} exec promptly alembic revision --autogenerate -m "migration"
 alembic-migrate: alembic-revision alembic-upgrade
 
+wait-for-db:
+	docker compose exec promptly ./wait-for-it.sh db:5432 -t 30
+
+
 # Tests
 test:
 	${DOCKER_COMPOSE} -f ${DOCKER_COMPOSE_PATH} exec promptly pytest -s tests/
