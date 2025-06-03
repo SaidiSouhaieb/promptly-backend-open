@@ -98,3 +98,4 @@ passlib
 PyJWT
 pytest
 pytest-mock
+pymilvus

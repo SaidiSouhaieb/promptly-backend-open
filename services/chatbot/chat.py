@@ -28,6 +28,7 @@ def get_chatbot_and_data_source(db: Session, chatbot_id: str):
         .first()
     )
 
+    print("data_source", data_source)
     if not data_source:
         raise ValueError("Data source not found")
 
