@@ -7,4 +7,4 @@ alembic revision --autogenerate -m "auto migration on container start" || echo "
 
 alembic upgrade head
 
-exec uvicorn main:app --host 0.0.0.0 --port 8230 --reload
+exec uvicorn main:app --host 0.0.0.0 --port 8231 --reload
